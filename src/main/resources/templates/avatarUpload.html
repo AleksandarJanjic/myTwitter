@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Your Avatar</title>
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script th:src="@{js/avatarUpload.js}"></script>
+</head>
+<body>
+    <div id="fileUpload">
+        <p>Upload Your File</p>
+        <form id="uploadForm" name="uploadFormName" action="/upload" method="post" enctype="multipart/form-data">
+            <input id="fileToUpload" type="file" name="file" required/>
+            <button id ="submitFile" type="submit">Upload</button>
+        </form>
+        <p id="result"></p>
+    </div>
+</body>
+</html>

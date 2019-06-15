@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script th:src="@{js/login.js}"></script>
+</head>
+<body>
+    <form action="/login/checkLogin" id="loginForm" method="post">
+        <p>Username:</p>
+        <input type="text" name="username">
+        <p>Password:</p>
+        <input type="text" name="password">
+        <input type="submit" value="Login">
+    </form>
+
+    <button><a th:href="@{/index}">Back</a></button>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>MyTwitter Main Page</title>
+    <script
+            src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script th:src="@{js/myTwitter.js}"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+    <h1>Main</h1>
+    <p th:text="${session.username}" id="username"></p>
+    <button><a th:href="@{/avatarUpload}">Upload Avatar</a></button>
+    <form action="/message/postMessage" id="messageSubmit" method="post">
+        <p>Your message:</p>
+        <input type="text" name="messageContent">
+        <input type="submit" value="Post Message">
+    </form>
+    <div id="messages">
+
+    </div>
+</body>
+</html>
